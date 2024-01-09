@@ -1,6 +1,6 @@
 const Customer = require("../modals/customer");
 const jwt = require("jsonwebtoken");
-const twilio = require("twilio");
+const twilio = require('twilio');
 const jwtSecretKey = process.env.JWT_SECRET_KEY || "default_secret_key";
 const cloudinary = require("cloudinary").v2;
 const fs = require("fs");
@@ -48,7 +48,6 @@ const AuthController = {
       res.status(400).json({ message: err.message });
     }
   },
-  // Function to generate a random 6-digit OTP
 
   loginWithOTP: async (req, res) => {
     const { mobileNumber } = req.body;

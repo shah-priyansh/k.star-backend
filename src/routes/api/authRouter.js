@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
-const authController = require("../../controllers/AuthController");
+const authController = require('../../controllers/AuthController');
 
 const storage = multer.diskStorage({
   destination: "public/data/",
@@ -17,7 +17,6 @@ router.post(
   authController.register
 );
 router.post("/loginWithOTP", authController.loginWithOTP);
-// Verify OTP route
 router.post("/verifyOTP", authController.verifyOTP);
 
 module.exports = router;

@@ -8,8 +8,7 @@ const customerSchema = new mongoose.Schema({
    villageName: { type: String, required: true },
    agentName: { type: String, required: true },
    profile_photo: { type: String, required: true },
-   otp: { type: String } ,
-   shortLivedToken: { type: String }
+   otp: { type: String } 
 });
 
 const Customer = mongoose.model('Customer', customerSchema);
